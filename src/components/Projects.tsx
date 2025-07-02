@@ -1,55 +1,61 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Star } from "lucide-react";
+import { Github, ExternalLink, Star, Bot, Database, Shield, BarChart3, Video, Microscope } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce API Platform",
-      description: "A comprehensive RESTful API for e-commerce applications with user management, product catalog, order processing, and payment integration.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe API"],
-      githubUrl: "https://github.com/yourusername/ecommerce-api",
-      liveUrl: "https://api.yourproject.com",
-      features: ["JWT Authentication", "Payment Processing", "Order Management", "Admin Dashboard"]
+      title: "Xymphony AI (Agent Development Platform)",
+      description: "Developed a scalable backend using FastAPI and Python to integrate multiple LLM providers (OpenAI, Google, Anthropic) via a unified API interface with modular agent architecture.",
+      icon: <Bot className="h-6 w-6" />,
+      technologies: ["FastAPI", "Python", "LangChain", "RAG", "RAGAS", "Docker", "OpenAI", "Anthropic"],
+      githubUrl: "https://github.com/sainath1420",
+      features: ["Multi-LLM Integration", "Custom Agent Tools", "RAG Capabilities", "Performance Evaluation", "CI/CD Pipeline"]
     },
     {
-      title: "Real-time Chat System",
-      description: "Scalable real-time messaging system with WebSocket connections, message persistence, and user presence tracking.",
-      image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=500&h=300&fit=crop",
-      technologies: ["Python", "FastAPI", "WebSockets", "MongoDB", "Redis"],
-      githubUrl: "https://github.com/yourusername/chat-system",
-      liveUrl: "https://chat.yourproject.com",
-      features: ["Real-time Messaging", "User Presence", "Message History", "File Sharing"]
+      title: "Clinical Trial Management System (CTMS)",
+      description: "Designed and developed a comprehensive system to streamline the planning, tracking, and management of clinical trials with integrated authentication and document management.",
+      icon: <Shield className="h-6 w-6" />,
+      technologies: ["FastAPI", "Keycloak", "Microservices", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/sainath1420",
+      features: ["Keycloak Integration", "EDC System Integration", "Version Control", "Data Compliance", "Secure Storage"]
     },
     {
-      title: "Microservices Architecture",
-      description: "Distributed system with multiple microservices for user management, notifications, and data processing with service discovery.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop",
-      technologies: ["Go", "Docker", "Kubernetes", "gRPC", "PostgreSQL"],
-      githubUrl: "https://github.com/yourusername/microservices",
-      features: ["Service Discovery", "Load Balancing", "Circuit Breaker", "Monitoring"]
+      title: "Sample Management System (SMS)",
+      description: "Built a system to efficiently store, track, and manage blood and tissue samples, improving laboratory workflow with enhanced performance and scalability.",
+      icon: <Microscope className="h-6 w-6" />,
+      technologies: ["FastAPI", "Python", "Microservices", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/sainath1420",
+      features: ["Sample Tracking", "Laboratory Workflow", "Secure Storage", "Data Confidentiality", "Scalable Architecture"]
     },
     {
-      title: "Data Analytics Pipeline",
-      description: "ETL pipeline for processing large datasets with real-time analytics and automated reporting capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      technologies: ["Python", "Apache Kafka", "Elasticsearch", "Docker", "AWS"],
-      githubUrl: "https://github.com/yourusername/analytics-pipeline",
-      features: ["Real-time Processing", "Data Visualization", "Automated Reports", "Scalable Architecture"]
+      title: "AI-Powered Document Retrieval System",
+      description: "Built a document retrieval system using LangChain and RAG to enhance search capabilities by integrating external knowledge sources with Ollama for model deployment.",
+      icon: <Database className="h-6 w-6" />,
+      technologies: ["LangChain", "RAG", "Ollama", "Python", "FastAPI"],
+      githubUrl: "https://github.com/sainath1420",
+      features: ["Knowledge Integration", "Enhanced Search", "Model Management", "Efficient Performance", "Scalable Deployment"]
+    },
+    {
+      title: "YouTube Video Analyzer",
+      description: "Developed a comprehensive tool to analyze YouTube videos by extracting metadata, comments, and engagement metrics to provide insights on video performance and audience behavior.",
+      icon: <Video className="h-6 w-6" />,
+      technologies: ["Python", "Data Scraping", "Analytics", "FastAPI"],
+      githubUrl: "https://github.com/sainath1420",
+      features: ["Metadata Extraction", "Comment Analysis", "Engagement Metrics", "Performance Insights", "Strategy Optimization"]
     }
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Some of the projects I've built that showcase my backend development skills
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Some of the projects I've built that showcase my backend development and AI/ML integration skills
           </p>
         </div>
 
@@ -57,33 +63,31 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg group"
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg group bg-card/50 backdrop-blur-sm"
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-gray-900 mb-2">
-                  {project.title}
-                </CardTitle>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {project.description}
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                    {project.icon}
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-xl font-bold text-foreground mb-2">
+                      {project.title}
+                    </CardTitle>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
               </CardHeader>
               
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                  <div className="grid grid-cols-2 gap-1">
+                  <h4 className="font-semibold text-foreground mb-2">Key Features:</h4>
+                  <div className="grid grid-cols-1 gap-1">
                     {project.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                        <Star className="h-3 w-3 text-yellow-500" />
+                      <div key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Star className="h-3 w-3 text-yellow-500 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
@@ -91,10 +95,10 @@ export const Projects = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
+                      <Badge key={tech} variant="secondary" className="text-xs bg-muted">
                         {tech}
                       </Badge>
                     ))}
@@ -110,21 +114,9 @@ export const Projects = () => {
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
-                      Code
+                      View Code
                     </a>
                   </Button>
-                  {project.liveUrl && (
-                    <Button
-                      size="sm"
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                      asChild
-                    >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </CardContent>
             </Card>
@@ -135,10 +127,10 @@ export const Projects = () => {
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-gray-300 hover:border-blue-500 px-8 py-3 rounded-full transition-all duration-300"
+            className="border-2 border-border hover:border-primary px-8 py-3 rounded-full transition-all duration-300"
             asChild
           >
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/sainath1420" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
               View All Projects on GitHub
             </a>
