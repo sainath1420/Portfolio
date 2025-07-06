@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, Phone } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -15,8 +16,15 @@ export const Hero = () => {
         <div className="text-center">
           <div className="animate-fade-in">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold shadow-xl">
-                SK
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 p-1 shadow-xl">
+                <Avatar className="w-full h-full">
+                  <AvatarImage 
+                    src="https://ellprnxjjzatijdxcogk.supabase.co/storage/v1/object/public/superdev-project-images/918ded0d-ab25-4bfb-a8ab-7a6aef98f4a9/hfn8w3e5bumvdcxv51via/1751786628611-Media%20(2).jfif" 
+                    alt="Sainath Vinnakota" 
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="text-3xl font-bold">SK</AvatarFallback>
+                </Avatar>
               </div>
             </div>
             
