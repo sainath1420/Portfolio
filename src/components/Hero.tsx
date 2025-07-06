@@ -15,11 +15,14 @@ export const Hero = () => {
         <div className="text-center">
           <div className="animate-fade-in">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 shadow-xl border-4 border-white dark:border-gray-800">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 shadow-xl border-4 border-white dark:border-gray-800 relative">
                 <img 
                   src="https://ellprnxjjzatijdxcogk.supabase.co/storage/v1/object/public/superdev-project-images/918ded0d-ab25-4bfb-a8ab-7a6aef98f4a9/hfn8w3e5bumvdcxv51via/1751786627607-Media%20(2).jfif" 
                   alt="Sainath Vinnakota" 
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.log('Image failed to load:', e);
+                  }}
                 />
               </div>
             </div>
