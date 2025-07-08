@@ -14,16 +14,16 @@ export const Education = () => {
     },
     {
       degree: "Diploma in Engineering",
-      institution: "Polytechnic College",
-      location: "India",
+      institution: "AANM & VVRSR Polytechnic College",
+      location: "Gudlavalleru",
       period: "2016 – 2019",
       grade: "84%",
       type: "diploma"
     },
     {
       degree: "Secondary School Certificate (SSC)",
-      institution: "High School",
-      location: "India",
+      institution: "Viswa Vignan E.M High School",
+      location: "Gudivada",
       period: "2016",
       grade: "CGPA: 9.5/10",
       type: "school"
