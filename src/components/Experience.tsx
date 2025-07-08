@@ -119,17 +119,36 @@ export const Experience = () => {
           </div>
         </div>
 
-        {/* Achievement Section */}
+        {/* Achievement Section with Certificate Image */}
         <div className="mt-16 text-center">
-          <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border border-border/50">
+          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border border-border/50">
             <CardContent className="pt-6">
-              <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="flex items-center justify-center gap-3 mb-6">
                 <Award className="h-6 w-6 text-yellow-600" />
-                <h3 className="text-lg font-semibold text-foreground">Recognition</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Recognition & Achievement</h3>
               </div>
-              <p className="text-muted-foreground">
-                <strong>Extra Miler Award</strong> - Recognized for exceptional dedication and outstanding performance at Smart IMS
-              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="text-left md:text-center">
+                  <h4 className="text-xl font-bold text-foreground mb-4">Extra Miler Award</h4>
+                  <p className="text-muted-foreground mb-4">
+                    Recognized for exceptional dedication and outstanding performance at Smart IMS for the month of September 2024.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    This award acknowledges ongoing contribution and commitment to excellence in software development and team collaboration.
+                  </p>
+                </div>
+                
+                <div className="flex justify-center">
+                  <div className="max-w-md w-full">
+                    <img 
+                      src="https://ellprnxjjzatijdxcogk.supabase.co/storage/v1/object/public/superdev-project-images/918ded0d-ab25-4bfb-a8ab-7a6aef98f4a9/hfn8w3e5bumvdcxv51via/1751946476837-extra%20miler.jfif" 
+                      alt="Extra Miler Award Certificate" 
+                      className="w-full h-auto rounded-lg shadow-lg border border-border/20 hover:shadow-xl transition-shadow duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>

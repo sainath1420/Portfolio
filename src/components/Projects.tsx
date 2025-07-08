@@ -1,10 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Star, Bot, Database, Shield, BarChart3, Video, Microscope } from "lucide-react";
+import { Github, ExternalLink, Star, Bot, Database, Shield, BarChart3, Video, Microscope, Brain } from "lucide-react";
 
 export const Projects = () => {
   const projects = [
+    {
+      title: "CompleteIQ",
+      description: "An intelligent platform designed to streamline and enhance various business processes through AI-powered automation and analytics, providing comprehensive insights and solutions.",
+      icon: <Brain className="h-6 w-6" />,
+      technologies: ["Python", "AI/ML", "FastAPI", "Data Analytics", "Automation"],
+      githubUrl: "https://github.com/sainath1420/CompleteIQ",
+      features: ["AI-Powered Automation", "Business Intelligence", "Data Analytics", "Process Optimization", "Comprehensive Insights"]
+    },
     {
       title: "Xymphony AI (Agent Development Platform)",
       description: "Developed a scalable backend using FastAPI and Python to integrate multiple LLM providers (OpenAI, Google, Anthropic) via a unified API interface with modular agent architecture.",

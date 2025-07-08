@@ -129,7 +129,7 @@ export const Contact = () => {
       
       <footer className="mt-20 pt-8 border-t border-border text-center">
         <p className="text-muted-foreground">
-          © 2024 Sainath Vinnakota. Built with React, TypeScript, and Tailwind CSS.
+          © 2025 Sainath Vinnakota. Built with React, TypeScript, and Tailwind CSS.
         </p>
       </footer>
     </section>

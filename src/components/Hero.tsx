@@ -59,7 +59,7 @@ export const Hero = () => {
                 className="border-2 border-border hover:border-primary px-8 py-3 rounded-full transition-all duration-300"
                 asChild
               >
-                <a href="/resume.pdf" download>
+                <a href="https://ellprnxjjzatijdxcogk.supabase.co/storage/v1/object/public/superdev-project-images/918ded0d-ab25-4bfb-a8ab-7a6aef98f4a9/hfn8w3e5bumvdcxv51via/1751946476836-sainath%20cv.pdf" download="Sainath_Vinnakota_Resume.pdf">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </a>
