@@ -39,7 +39,7 @@ export const Hero = () => {
             </p>
             
             <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Results-driven developer with 2.5+ years of experience designing scalable backend systems. 
+              Results-driven developer with 3 years of experience designing scalable backend systems. 
               Expert in microservices architecture, Docker containerization, and modern Python frameworks.
             </p>
 

@@ -8,7 +8,7 @@ process.env.SUPERDEV_SANDBOX = "true";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 8080,
+    port: 7070,
     proxy: {
       "/api/integrations": {
         target: "https://superdev.build",
